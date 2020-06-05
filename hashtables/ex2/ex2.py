@@ -16,7 +16,7 @@ def reconstruct_trip(tickets, length):
     cache = {}
 
     # Now lets go through each ticket that are stored
-    for ticket in tickets:
+    for i in tickets:
         cache[i.source] = i.destination
 
     route = []
@@ -26,7 +26,7 @@ def reconstruct_trip(tickets, length):
     # our for-loop:
     for k, v in cache.items():
         if k == "NONE":
-            route.append(value)
+            route.append(v)
 
     complete_ticket = False
     # while loop:
